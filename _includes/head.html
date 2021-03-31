@@ -3,7 +3,7 @@
   {% assign title = pages.title | default: site.title | escape %}
   {% assign description = pages.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
 
-  {% if pages.name %}
+  {% if page.name and page.collection == 'projects' %}
     {% assign title = pages.name | escape %}
   {% endif %}
 
