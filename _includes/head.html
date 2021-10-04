@@ -4,7 +4,7 @@
   {% assign description = pages.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
 
   {% if page.name and page.collection == 'projects' %}
-    {% assign title = pages.name | escape %}
+    {% assign title = page.name | escape %}
   {% endif %}
 
   <meta charset="utf-8">
@@ -17,19 +17,21 @@
 
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
-      
   <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+
+  <!-- Theme style -->
+  <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
 
   <!-- Bootstrap CSS CDN -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 
   <!-- Animate CSS CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" type="text/css"/>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" type="text/css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
 </head>
